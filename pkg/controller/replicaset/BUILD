@@ -85,3 +85,18 @@ filegroup(
     ],
     tags = ["automanaged"],
 )
+
+go_test(
+    name = "go_default_xtest",
+    srcs = ["conversion_test.go"],
+    deps = [
+        ":go_default_library",
+        "//pkg/controller:go_default_library",
+        "//pkg/controller/replication:go_default_library",
+        "//vendor/k8s.io/api/core/v1:go_default_library",
+        "//vendor/k8s.io/apimachinery/pkg/apis/meta/v1:go_default_library",
+        "//vendor/k8s.io/client-go/informers:go_default_library",
+        "//vendor/k8s.io/client-go/kubernetes:go_default_library",
+        "//vendor/k8s.io/client-go/kubernetes/fake:go_default_library",
+    ],
+)
