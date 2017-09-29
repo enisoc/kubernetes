@@ -37,6 +37,9 @@ filegroup(
 
 filegroup(
     name = "all-srcs",
-    srcs = [":package-srcs"],
+    srcs = [
+        ":package-srcs",
+        "//test/integration/replicaset/perf:all-srcs",
+    ],
     tags = ["automanaged"],
 )
